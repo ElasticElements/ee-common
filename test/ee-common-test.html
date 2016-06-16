@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <!-- Import the element to test -->
+    <link rel="import" href="../ee-common.html">
+  </head>
+  <body>
+
+    <script>
+      suite('<ee-common>', function() {
+
+        setup(function() {
+
+        });
+
+        test('lodash is defined', function () {
+          expect(_).to.exist;
+          expect(_).to.be.a('function');
+        });
+
+        test('elastic.js is defined', function () {
+          expect(ejs).to.exist;
+          expect(ejs).to.be.an('object');
+        });
+
+        test('elasticsearch is defined', function () {
+          expect(elasticsearch).to.exist;
+          expect(elasticsearch.Client).to.be.a('function');
+        });
+
+      });
+    </script>
+
+  </body>
+</html>
